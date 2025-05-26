@@ -1,0 +1,13 @@
+-- Tabla de Ángulos
+CREATE TABLE angulo (
+    id SERIAL PRIMARY KEY,
+    valor DECIMAL(10,2) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- Tabla de EMG
+CREATE TABLE emg (
+    id SERIAL PRIMARY KEY,
+    valor DECIMAL(10,2) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
