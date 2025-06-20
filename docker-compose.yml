@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  tareamedicion-prod:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: tareamedicion-prod
+    environment:
+      - SPRING_PROFILES_ACTIVE=prod
+    ports:
+      - "8050:8080"
+    restart: unless-stopped
+    networks:
+      - tareamedicion-network
+    volumes:
+      - ./src/main/resources/application-prod.properties:/app/config/application-prod.properties
+
+networks:
+  tareamedicion-network:
+    name: tareamedicion-network 
